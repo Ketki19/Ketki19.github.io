@@ -1,108 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loaded Page</title>
-   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
-  <style>
-    * {
+<html>
+<style>
+body, html {
+  height: 100%;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
-$color: #e01931;
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
 
-.claus-container {
-  width: 100vw;
-  height: 100vh;
-  background: #061a27;
+.topleft {
   position: absolute;
   top: 0;
-  left: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  .claus-content {
-    width: 220px;
-    height: 220px;
-    border: 10px inset $color;
-    box-shadow: inset 0 0 40px $color;
-    border-radius: 50%;
-    position: absolute;
-    animation: rotate 1s infinite;
-  }
-  .claus {
-    width: 300px;
-    height: 203px;
-    background: url(http://imgfz.com/i/4PscUgh.png) 0 0 no-repeat;
-    position: absolute;
-    animation: run 1s steps(13) infinite;
-    left: 50%;
-    top: 50%;
-    transform: translate(-40%, -50%);
-  }
-  h2 {
-    color: #fff;
-    text-align: center;
-    position: relative;
-    bottom: -150px;
-    letter-spacing: 10px;
-    font-family: "Fredoka One", cursive;
-    text-shadow: 1px 1px 2px;
-    animation: opacity 1s infinite steps(13);
-  }
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes run {
-  100% {
-    background-position: -3926px 0;
-  }
-}
-@keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.container {
-  h1 {
-    text-align: center;
-    margin: 20px 0;
-    color: #2d2d2d;
-  }
+  left: 16px;
 }
 
-  </style>
-</head>
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
+}
 
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+hr {
+  margin: auto;
+  width: 40%;
+}
+</style>
 <body>
-  <!-- NOTA: LA ANIMACIÓN SOLO SE PUEDE VER EN
-  CHROME YA QUE MOZILLA NO TOMA LA URL-->
-  <div class="claus-container">
-    <div class="claus-content"></div>
-    <div class="claus"></div>
-    <h2>LOADED</h2>
-  </div>
 
-   <div class="container">
-     <h1>Welcome Website</h1>
-   </div>
- <script>
-   const clausContainer = document.querySelector(".claus-container");
-  </script>
+<div class="bgimg">
+  <div class="topleft">
+    <p>Logo</p>
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p>35 days left</p>
+  </div>
+  <div class="bottomleft">
+    <p>Some text</p>
+  </div>
+</div>
+
 </body>
 </html>
